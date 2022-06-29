@@ -87,6 +87,7 @@ public class ComputeShaderTest2 : MonoBehaviour
 
         computeShader.SetBuffer(0, "cubes", cubesBuffer);
         computeShader.SetFloat("resolution", data.Length);
+
         computeShader.Dispatch(0, data.Length / 10, 1, 1);
 
         cubesBuffer.GetData(data);
